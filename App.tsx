@@ -15,6 +15,7 @@ import { Loading } from './src/components/Loading'
 import { tagUserInfoCreate } from './src/notifications/notificationsTags'
 
 import { CartContextProvider } from './src/contexts/CartContext'
+import { Notification } from './src/components/Notification'
 
 const oneSignalAppId =
   Platform.OS === 'ios'
@@ -53,7 +54,8 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <CartContextProvider>
+      
+      <CartContextProvider >
         {fontsLoaded ? <Routes /> : <Loading />}
       </CartContextProvider>
     </NativeBaseProvider>

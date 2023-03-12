@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "igniteshoesapp",
-    "slug": "igniteshoesapp",
-    "scheme": "igniteshoesapp",
+    "name": "shoes-store",
+    "slug": "shoes-store",
+    "scheme": "shoes-store",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,14 +20,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.rocketseat.igniteshoes"
+      "bundleIdentifier": "com.juliommen.shoesstore"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.rocketseat.igniteshoes"
+      "package": "com.juliommen.shoesstore"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -39,28 +39,7 @@
           "mode": "development"
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "build": {
-          "experimental": {
-            "ios": {
-              "appExtensions": [
-                {
-                  "targetName": "OneSignalNotificationServiceExtension",
-                  "bundleIdentifier": "com.rocketseat.igniteshoes.OneSignalNotificationServiceExtension",
-                  "entitlements": {
-                    "com.apple.security.application-groups": [
-                      "group.com.rocketseat.igniteshoes.onesignal"
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "projectId": "614a260a-c82e-4b92-8def-bd52a529d6df"
-      }
-    }
+    ]
+
   }
 }

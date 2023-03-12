@@ -1,4 +1,4 @@
-package com.rocketseat.igniteshoes;
+package com.juliommen.shoesstore;
 
 import android.os.Build;
 import android.os.Bundle;

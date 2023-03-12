@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+
 import { useTheme } from 'native-base';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import OneSignal, { NotificationReceivedEvent, OSNotification } from 'react-native-onesignal';
+
+import OneSignal, { NotificationReceivedEvent, OSNotification } from 'react-native-onesignal'
 
 import { AppRoutes } from './app.routes';
 import { Notification } from '../components/Notification';
+import { useEffect, useState } from 'react';
 
 const linking = {
-  prefixes: ['igniteshoesapp://','com.rocketseat.igniteshoes://'],
+  prefixes: ['shoes-store://','com.juliommen.shoesstore://'],
   config: {
     screens: {
       details: {
@@ -22,7 +24,6 @@ const linking = {
 
 export function Routes() {
   const [notification, setNotification] =  useState<OSNotification>();
-
   const { colors } = useTheme();
 
   const theme = DefaultTheme;
@@ -32,16 +33,17 @@ export function Routes() {
     const unsubscribe = OneSignal
     .setNotificationWillShowInForegroundHandler((notificationRecivedEvent: NotificationReceivedEvent) => {
       const response = notificationRecivedEvent.getNotification();
-
+ 
       setNotification(response);
     })
-
+  
     return () => unsubscribe;
 
   },[])
 
   return (
-    <NavigationContainer theme={theme} linking={linking}>
+    <NavigationContainer theme={theme} linking={linking} >
+      
       <AppRoutes />
       {
         notification?.title &&

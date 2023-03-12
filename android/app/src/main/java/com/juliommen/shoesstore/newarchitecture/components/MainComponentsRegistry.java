@@ -1,4 +1,4 @@
-package com.rocketseat.igniteshoes.newarchitecture.components;
+package com.juliommen.shoesstore.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
