@@ -17,6 +17,9 @@ const linking = {
         parse: {
           productId: (productId: string) => productId
         }
+      },
+      cart: {
+        path:'cart'
       }
     }
   }
